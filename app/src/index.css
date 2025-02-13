@@ -22,7 +22,8 @@ body {
   line-height: 0.5;
 }
 
-.pageTitle {
+.pageTitle,
+.navBtn {
   font-family: 'Cormorant', serif;
   line-height: 0.5;
 }
