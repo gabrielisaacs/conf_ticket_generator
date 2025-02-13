@@ -1,20 +1,21 @@
-import React from 'react'
-import './index.css'
-import NavBar from './components/NavBar'
-import SelectTicket from './components/SelectTicket'
-import AttendeeDetails from './components/AttendeeDetails'
-import Booked from './components/Booked'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import './index.css';
+import SelectionPage from './pages/SelectionPage';
+import UserDetailsPage from './pages/UserDetails';
+import TicketPage from './pages/TicketPage';
 
 const App = () => {
   return (
-    <div className='flex bg-[#02191D] w-full min-h-screen px-16 py-8 justify-center'>
-      <NavBar />
-      {/* <SelectTicket /> */}
-      {/* <AttendeeDetails /> */}
-      <Booked />
+    <Router>
+      <Routes>
+        <Route path="/" element={<SelectionPage />} />
+        <Route path="/user-details" element={<UserDetailsPage />} />
+        <Route path="/ticket" element={<TicketPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Router>
+  );
+};
 
-    </div>
-  )
-}
-
-export default App
+export default App;

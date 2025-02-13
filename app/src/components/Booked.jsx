@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Booked = () => {
+const Booked = ({ onBookAnother }) => {
   return (
     <div className='w-[43.75rem] h-max-content bg-[#041E23] border border-[#0E464F] rounded-[2rem] mt-[8rem] text-white p-[3rem]'>
       <div className="flex flex-row w-full items-center mb-2">
@@ -70,7 +70,10 @@ const Booked = () => {
 
         <div className="flex flex-row gap-[1.5rem] w-full">
           <a href="#" className='w-full'>
-            <button className='w-full h-[3.25rem] hover:bg-[#24A0B5]/20 justify-center rounded-xl border border-[#24A0B5] text-[#24A0B5] text-[1rem] text-center transition-all duration-300'>
+            <button
+              onClick={onBookAnother}
+              className='w-full h-[3.25rem] hover:bg-[#24A0B5]/20 justify-center rounded-xl border border-[#24A0B5] text-[#24A0B5] text-[1rem] text-center transition-all duration-300'
+            >
               Book Another Ticket
             </button>
           </a>

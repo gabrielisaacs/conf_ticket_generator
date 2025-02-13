@@ -3,7 +3,7 @@ import { VscCloudDownload } from 'react-icons/vsc'
 import { FiMail } from 'react-icons/fi'
 import { RxAvatar } from "react-icons/rx"
 
-const AttendeeDetails = () => {
+const AttendeeDetails = ({ onBack, onSubmit }) => {
   return (
     <div className='w-[43.75rem] h-max-content bg-[#041E23] border border-[#0E464F] rounded-[2rem] mt-[8rem] text-white p-[3rem]'>
       <div className="flex flex-row w-full items-center mb-2">
@@ -65,16 +65,18 @@ const AttendeeDetails = () => {
         </div>
 
         <div className="flex flex-row gap-[1.5rem] w-full">
-          <a href="#" className='w-full'>
-            <button className='w-full h-[3.25rem] hover:bg-[#24A0B5]/20 justify-center rounded-xl border border-[#24A0B5] text-[#24A0B5] text-[1rem] text-center transition-all duration-300'>
-              Back
-            </button>
-          </a>
-          <a href="#" className='w-full'>
-            <button className='w-full h-[3.25rem] bg-[#24A0B5] justify-center rounded-xl border border-[#24A0B5] hover:bg-opacity-80 text-white text-[1rem] text-center transition-all duration-300'>
-              Get My Free Ticket
-            </button>
-          </a>
+          <button
+            onClick={onBack}
+            className='w-full h-[3.25rem] hover:bg-[#24A0B5]/20 justify-center rounded-xl border border-[#24A0B5] text-[#24A0B5] text-[1rem] text-center transition-all duration-300'
+          >
+            Back
+          </button>
+          <button
+            onClick={onSubmit}
+            className='w-full h-[3.25rem] bg-[#24A0B5] justify-center rounded-xl border border-[#24A0B5] hover:bg-opacity-80 text-white text-[1rem] text-center transition-all duration-300'
+          >
+            Get My Free Ticket
+          </button>
         </div>
       </div>
 

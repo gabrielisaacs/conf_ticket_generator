@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SelectTicket = () => {
+const SelectTicket = ({ onSelect }) => {
   return (
     <div className='w-[43.75rem] h-max-content bg-[#041E23] border border-[#0E464F] rounded-[2rem] mt-[8rem] text-white p-[3rem]'>
       <div className="flex flex-row w-full items-center mb-2">
@@ -76,7 +76,10 @@ const SelectTicket = () => {
             </button>
           </a>
           <a href="#" className='w-full'>
-            <button className='w-full h-[3.25rem] bg-[#24A0B5] justify-center rounded-xl border border-[#24A0B5] hover:bg-opacity-80 text-white text-[1rem] text-center transition-all duration-300'>
+            <button
+              onClick={onSelect}
+              className='w-full h-[3.25rem] bg-[#24A0B5] justify-center rounded-xl border border-[#24A0B5] hover:bg-opacity-80 text-white text-[1rem] text-center transition-all duration-300'
+            >
               Get My Free Ticket
             </button>
           </a>
