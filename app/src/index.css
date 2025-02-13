@@ -9,3 +9,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.eventTitle {
+  font-family: 'Road Rage', serif;
+  line-height: 0.5;
+}
+
+.pageTitle {
+  font-family: 'Cormorant', serif;
+  line-height: 0.5;
+}
