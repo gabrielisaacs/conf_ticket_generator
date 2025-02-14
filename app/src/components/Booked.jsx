@@ -5,7 +5,7 @@ const Booked = ({ onBookAnother }) => {
   const { ticketData } = useTicket();
 
   const formatSpecialRequest = (request) => {
-    if (!request) return "No special request";
+    if (!request) return "Nil";
     return request.length > 120 ? `${request.substring(0, 120)}...` : request;
   };
 
