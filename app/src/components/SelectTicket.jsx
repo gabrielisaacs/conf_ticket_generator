@@ -39,7 +39,7 @@ const SelectTicket = ({ onSelect }) => {
   };
 
   return (
-    <div className='w-[43.75rem] h-max-content bg-[#041E23] border border-[#0E464F] rounded-[2rem] mt-[8rem] text-white p-[3rem]'>
+    <div className='w-[43.75rem] h-max-content bg-[#041E23] border border-[#0E464F] rounded-[2rem] mt-[8rem] mb-16 text-white p-[3rem]'>
       <div className="flex flex-row w-full items-center mb-2">
         <div className="text-[2rem] pageTitle">Ticket Selection</div>
         <div className="text-[1rem] ml-auto">Step 1/3</div>
@@ -51,7 +51,7 @@ const SelectTicket = ({ onSelect }) => {
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <div className="w-full h-max-content bg-[#08252B] border border-[#0E464F] rounded-[2rem] p-[1.5rem]">
           {/* Header Section */}
-          <div className="bg-gradient-to-br from-[#08252b] from-20% via-[#24a0b5]/30 via-50% to-[#08252b] t0-80% flex flex-col mb-[2rem] h-[12.5rem] w-full p-[1.5rem] border border-[#07373F] rounded-2xl text-center justify-center gap-4">
+          <div className="bg-gradient-to-br from-[#08252b] from-25% via-[#24a0b5]/30 via-40% to-[#08252b] t0-90% flex flex-col mb-[2rem] h-[12.5rem] w-full p-[1.5rem] border border-[#07373F] rounded-2xl text-center justify-center gap-4">
             <p className="text-[3.875rem] eventTitle">TechEmber Fest "25</p>
             <p className="max-w-[21.25rem] text-[1rem] mx-auto">
               Join us for an unforgettable experience at TechEmber! Secure your spot now.

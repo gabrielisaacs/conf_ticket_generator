@@ -96,7 +96,7 @@ const AttendeeDetails = ({ onBack, onSubmit }) => {
   };
 
   return (
-    <div className='w-[43.75rem] h-max-content bg-[#041E23] border border-[#0E464F] rounded-[2rem] mt-[8rem] text-white p-[3rem]'>
+    <div className='w-[43.75rem] h-max-content bg-[#041E23] border border-[#0E464F] rounded-[2rem] mt-[8rem] mb-16 text-white p-[3rem]'>
       <div className="flex flex-row w-full items-center mb-2">
         <div className="text-[2rem] pageTitle">Attendee Details</div>
         <div className="text-[1rem] ml-auto">Step 2/3</div>
