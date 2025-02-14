@@ -10,87 +10,93 @@ const Booked = ({ onBookAnother }) => {
   };
 
   return (
-    <div className='w-[43.75rem] h-max-content bg-[#041E23] border border-[#0E464F] rounded-[2rem] mt-[8rem] mb-16 text-white p-[3rem]'>
+    <div className='w-[90%] md:w-[80%] lg:w-[43.75rem] h-max-content bg-[#041E23] border border-[#0E464F] rounded-2xl lg:rounded-[2rem] mt-[6rem] lg:mt-[8rem] mb-16 text-white p-4 md:p-6 lg:p-[3rem]'>
       <div className="flex flex-row w-full items-center mb-2">
-        <div className="text-[2rem] pageTitle">Ready</div>
-        <div className="text-[1rem] ml-auto">Step 3/3</div>
+        <div className="text-xl md:text-2xl lg:text-[2rem] pageTitle">Ready</div>
+        <div className="text-sm lg:text-[1rem] ml-auto">Step 3/3</div>
       </div>
-      <div className="w-full h-[0.25rem] bg-[#0E464F] relative rounded-full mb-[2rem]">
+      <div className="w-full h-[0.25rem] bg-[#0E464F] relative rounded-full mb-4 lg:mb-[2rem]">
         <div className="h-full rounded-full bg-[#24a0b5] w-full"></div>
       </div>
-      <div className="w-full h-max-content bg-[#08252B] border border-[#0E464F] rounded-[2rem] p-[1.45rem]">
-        <div className="ticketContainer w-[18.75rem] h-[37.5rem] p-[1rem] mx-auto my-8">
-          <div className="flex flex-col mb-[2rem] h-[27.875rem] w-full py-[1.65rem] px-4 border border-[#24A0B5] rounded-2xl text-center justify-center gap-4">
-            <div className="flex flex-col w-full justify-center gap-4">
-              <div className="flex flex-col w-full justify-center gap-2">
-                <p className="text-[2.125rem] eventTitle mb-2 mt-4">TechEmber Fest "25</p>
-                <div className="flex flex-col gap-1 text-center mx-auto text-[0.625rem]">
-                  <p>📍 Novare Mall, Wuse Zone 5, Abuja</p>
-                  <p>🗓️ March 15, 2025 | 7:00 PM</p>
+      <div className="w-full h-max-content bg-[#08252B] border border-[#0E464F] rounded-xl lg:rounded-[2rem] p-4 lg:p-[1.45rem]">
+        {/* Ticket Container with preserved aspect ratio */}
+        <div className="relative w-full max-w-[18.75rem] mx-auto my-4 lg:my-8">
+          <div className="ticketContainer aspect-[300/600] w-full">
+            {/* Content wrapper with absolute positioning to maintain layout */}
+            <div className="absolute inset-0 p-[1rem]">
+              <div className="flex flex-col h-[23.5rem] lg:h-[27.875rem] w-full py-[1rem] lg:py-[1.65rem] px-4 border border-[#24A0B5] rounded-2xl text-center justify-center gap-4">
+                <div className="flex flex-col w-full justify-center gap-4">
+                  <div className="flex flex-col w-full justify-center gap-2">
+                    <p className="text-2xl sm:text-[2.125rem] eventTitle mb-1 lg:mb-2 mt-2 lg:mt-4">TechEmber Fest "25</p>
+                    <div className="flex flex-col gap-1 text-center mx-auto text-[0.625rem]">
+                      <p>📍 Novare Mall, Wuse Zone 5, Abuja</p>
+                      <p>🗓️ March 15, 2025 | 7:00 PM</p>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex border-[4px] border-[#24A0B5]/50 w-28 h-28 sm:w-[8.75rem] sm:h-[8.75rem] rounded-2xl bg-[#0E464F] mx-auto overflow-hidden">
+                      {ticketData.avatarUrl && (
+                        <img
+                          src={ticketData.avatarUrl}
+                          alt="Profile"
+                          className="w-full h-full object-cover"
+                        />
+                      )}
+                    </div>
+                  </div>
+                  <div className="w-full h-max-content bg-[#08343C] border border-[#133D44] rounded-md p-2 text-[0.65rem] text-left">
+                    {/* User Info Section */}
+                    <div className="flex justify-between divide-x divide-[#133D44]">
+                      <div className="w-1/2 sm:w-[6.75rem]">
+                        <p className="text-[#D9D9D9]/60">Name</p>
+                        <p className="text-white font-bold truncate">{ticketData.fullName || 'N/A'}</p>
+                      </div>
+                      <div className="w-1/2 sm:w-[6.75rem] pl-2">
+                        <p className="text-[#D9D9D9]/60">Email *</p>
+                        <p className="text-white font-bold truncate">{ticketData.email || 'N/A'}</p>
+                      </div>
+                    </div>
+
+                    {/* Ticket Info Section */}
+                    <div className="flex justify-between divide-x divide-[#133D44]">
+                      <div className="w-1/2 sm:w-[6.75rem] border-t border-[#133D44] pt-2">
+                        <p className="text-[#D9D9D9]/60">Ticket Type:</p>
+                        <p className="text-white truncate">
+                          {ticketData.ticketType ?
+                            ticketData.ticketType.toUpperCase() : 'N/A'}
+                        </p>
+                      </div>
+                      <div className="w-1/2 sm:w-[6.75rem] pl-2 border-t border-l border-[#133D44] pt-2">
+                        <p className="text-[#D9D9D9]/60">Ticket for:</p>
+                        <p className="text-white">{ticketData.numOfTickets || 1}</p>
+                      </div>
+                    </div>
+
+                    {/* Special Request */}
+                    <div className='w-full min-h-[4.0625rem] border-t border-[#133D44] pt-2'>
+                      <p className="text-[#D9D9D9]/60">Special request?</p>
+                      <p className="text-white max-h-[1.75rem] lg:max-h-[3rem] overflow-hidden line-clamp-3">
+                        {formatSpecialRequest(ticketData.specialRequest)}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="">
-                <div className="flex border-[4px] border-[#24A0B5]/50 w-[8.75rem] h-[8.75rem] rounded-2xl bg-[#0E464F] mx-auto overflow-hidden">
-                  {ticketData.avatarUrl && (
-                    <img
-                      src={ticketData.avatarUrl}
-                      alt="Profile"
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                </div>
-              </div>
-              <div className="w-full bg-[#08343C] border border-[#133D44] rounded-md p-2 text-[0.65rem] text-left">
-                {/* User Info Section */}
-                <div className="flex justify-between divide-x divide-[#133D44]">
-                  <div className="w-[6.75rem] h-[2.8125rem]">
-                    <p className="text-[#D9D9D9]/60">Enter your name</p>
-                    <p className="text-white font-bold">{ticketData.fullName || 'N/A'}</p>
-                  </div>
-                  <div className="w-[6.75rem] h-[2.8125rem] pl-2">
-                    <p className="text-[#D9D9D9]/60">Enter your email *</p>
-                    <p className="text-white font-bold">{ticketData.email || 'N/A'}</p>
-                  </div>
-                </div>
-
-                {/* Ticket Info Section */}
-                <div className="flex justify-between divide-x divide-[#133D44]">
-                  <div className="w-[6.75rem] h-[2.8125rem] border-t border-[#133D44] pt-2">
-                    <p className="text-[#D9D9D9]/60">Ticket Type:</p>
-                    <p className="text-white">
-                      {ticketData.ticketType ?
-                        ticketData.ticketType.toUpperCase() : 'N/A'}
-                    </p>
-                  </div>
-                  <div className="w-[6.75rem] h-[2.8125rem] pl-2 border-t border-l border-[#133D44] pt-2">
-                    <p className="text-[#D9D9D9]/60">Ticket for:</p>
-                    <p className="text-white">{ticketData.numOfTickets || 1}</p>
-                  </div>
-                </div>
-
-                {/* Special Request */}
-                <div className='w-full min-h-[4.0625rem] border-t border-[#133D44] pt-2'>
-                  <p className="text-[#D9D9D9]/60">Special request?</p>
-                  <p className="text-white max-h-[3rem] overflow-hidden line-clamp-3">
-                    {formatSpecialRequest(ticketData.specialRequest)}
-                  </p>
-                </div>
+              <div className="absolute bottom-0 left-0 right-0 flex justify-center -translate-y-4 lg:translate-y-5">
+                <img src="/barcode.svg" alt="barcode" className="w-full max-w-[80%] sm:max-w-none" />
               </div>
             </div>
           </div>
-          <div className="flex w-full justify-center translate-y-5">
-            <img src="/barcode.svg" alt="barcode" />
-          </div>
         </div>
 
-        <div className="flex flex-row gap-[1.5rem] w-full">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-[1.5rem] w-full mt-8">
           <button
             onClick={onBookAnother}
-            className='w-full h-[3.25rem] hover:bg-[#24A0B5]/20 justify-center rounded-xl border border-[#24A0B5] text-[#24A0B5] text-[1rem] text-center transition-all duration-300'
+            className='w-full h-[3.25rem] hover:bg-[#24A0B5]/20 justify-center rounded-xl border border-[#24A0B5] text-[#24A0B5] text-sm lg:text-[1rem] text-center transition-all duration-300'
           >
             Book Another Ticket
           </button>
-          <button className='w-full h-[3.25rem] bg-[#24A0B5] justify-center rounded-xl border border-[#24A0B5] hover:bg-opacity-80 text-white text-[1rem] text-center transition-all duration-300'>
+          <button className='w-full h-[3.25rem] bg-[#24A0B5] justify-center rounded-xl border border-[#24A0B5] hover:bg-opacity-80 text-white text-sm lg:text-[1rem] text-center transition-all duration-300'>
             Download Ticket
           </button>
         </div>
