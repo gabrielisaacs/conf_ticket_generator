@@ -11,7 +11,7 @@ const TicketPage = () => {
   };
 
   return (
-    <div className='flex bg-[#02191D] w-full min-h-screen px-16 py-8 justify-center'>
+    <div className='flex bg-[#02191D] w-full min-h-screen px-0 lg:px-16 py-8 justify-center'>
       <NavBar />
       <Booked onBookAnother={handleBookAnother} />
     </div>

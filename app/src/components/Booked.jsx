@@ -24,10 +24,10 @@ const Booked = ({ onBookAnother }) => {
           <div className="ticketContainer aspect-[300/600] w-full">
             {/* Content wrapper with absolute positioning to maintain layout */}
             <div className="absolute inset-0 p-[1rem]">
-              <div className="flex flex-col h-[23.5rem] lg:h-[27.875rem] w-full py-[1rem] lg:py-[1.65rem] px-4 border border-[#24A0B5] rounded-2xl text-center justify-center gap-4">
+              <div className="flex flex-col h-[27.875rem] w-full py-[1.65rem] px-4 border border-[#24A0B5] rounded-2xl text-center justify-center gap-4">
                 <div className="flex flex-col w-full justify-center gap-4">
                   <div className="flex flex-col w-full justify-center gap-2">
-                    <p className="text-2xl sm:text-[2.125rem] eventTitle mb-1 lg:mb-2 mt-2 lg:mt-4">TechEmber Fest "25</p>
+                    <p className="text-2xl sm:text-[2.125rem] eventTitle mb-2 mt-4">TechEmber Fest "25</p>
                     <div className="flex flex-col gap-1 text-center mx-auto text-[0.625rem]">
                       <p>📍 Novare Mall, Wuse Zone 5, Abuja</p>
                       <p>🗓️ March 15, 2025 | 7:00 PM</p>
@@ -44,7 +44,7 @@ const Booked = ({ onBookAnother }) => {
                       )}
                     </div>
                   </div>
-                  <div className="w-full h-max-content bg-[#08343C] border border-[#133D44] rounded-md p-2 text-[0.65rem] text-left">
+                  <div className="w-full bg-[#08343C] border border-[#133D44] rounded-md p-2 text-[0.65rem] text-left">
                     {/* User Info Section */}
                     <div className="flex justify-between divide-x divide-[#133D44]">
                       <div className="w-1/2 sm:w-[6.75rem]">
@@ -75,7 +75,7 @@ const Booked = ({ onBookAnother }) => {
                     {/* Special Request */}
                     <div className='w-full min-h-[4.0625rem] border-t border-[#133D44] pt-2'>
                       <p className="text-[#D9D9D9]/60">Special request?</p>
-                      <p className="text-white max-h-[1.75rem] lg:max-h-[3rem] overflow-hidden line-clamp-3">
+                      <p className="text-white max-h-[3rem] overflow-hidden line-clamp-3">
                         {formatSpecialRequest(ticketData.specialRequest)}
                       </p>
                     </div>

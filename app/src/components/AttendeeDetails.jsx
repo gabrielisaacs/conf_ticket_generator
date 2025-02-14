@@ -76,7 +76,7 @@ const AttendeeDetails = ({ onBack, onSubmit }) => {
       setTicketData(prev => ({
         ...prev,
         avatarUrl: optimizedUrl,
-        uploadTimestamp: '2025-02-14 11:10:45',
+        uploadTimestamp: '2025-02-14 12:02:13',
         uploaderLogin: 'gabrielisaacs'
       }));
     } catch (error) {
@@ -90,13 +90,15 @@ const AttendeeDetails = ({ onBack, onSubmit }) => {
   const onFormSubmit = (data) => {
     setTicketData({
       ...ticketData,
-      ...data
+      ...data,
+      timestamp: '2025-02-14 12:02:13',
+      username: 'gabrielisaacs'
     });
     onSubmit();
   };
 
   return (
-    <div className='w-[90%] md:w-[80%] lg:w-[43.75rem] h-max-content bg-[#041E23] border border-[#0E464F] rounded-2xl lg:rounded-[2rem] mt-[6rem] lg:mt-[8rem] mb-16 text-white p-4 md:p-6 lg:p-[3rem]'>
+    <div className='w-[90vw] sm:w-[90%] md:w-[80%] lg:w-[43.75rem] h-max-content bg-[#041E23] border border-[#0E464F] rounded-2xl lg:rounded-[2rem] mt-[6rem] lg:mt-[8rem] mb-16 text-white p-4 md:p-6 lg:p-[3rem]'>
       <div className="flex flex-row w-full items-center mb-2">
         <div className="text-xl md:text-2xl lg:text-[2rem] pageTitle">Attendee Details</div>
         <div className="text-sm lg:text-[1rem] ml-auto">Step 2/3</div>

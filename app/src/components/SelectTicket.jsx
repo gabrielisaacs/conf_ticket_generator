@@ -51,8 +51,8 @@ const SelectTicket = ({ onSelect }) => {
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <div className="w-full h-max-content bg-[#08252B] border border-[#0E464F] rounded-xl lg:rounded-[2rem] p-4 lg:p-[1.5rem]">
           {/* Header Section */}
-          <div className="bg-gradient-to-br from-[#08252b] from-25% via-[#24a0b5]/30 via-40% to-[#08252b] t0-90% flex flex-col mb-6 lg:mb-[2rem] h-auto lg:h-[12.5rem] w-full p-4 lg:p-[1.5rem] border border-[#07373F] rounded-xl lg:rounded-2xl text-center justify-center gap-4">
-            <p className="text-3xl md:text-5xl lg:text-[3.875rem] eventTitle">TechEmber Fest "25</p>
+          <div className="bg-gradient-to-br from-[#08252b] from-25% via-[#24a0b5]/30 via-40% to-[#08252b] t0-90% flex flex-col mb-6 lg:mb-[2rem] min-h-[12rem] lg:h-[12.5rem] w-full p-4 lg:p-[1.5rem] border border-[#07373F] rounded-xl lg:rounded-2xl text-center justify-center gap-4">
+            <p className="text-4xl md:text-5xl lg:text-[3.875rem] eventTitle">TechEmber Fest "25</p>
             <p className="text-sm lg:text-[1rem] mx-auto max-w-full lg:max-w-[21.25rem]">
               Join us for an unforgettable experience at TechEmber! Secure your spot now.
             </p>

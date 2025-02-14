@@ -3,7 +3,7 @@ import { LiaLongArrowAltRightSolid } from 'react-icons/lia'
 
 const NavBar = () => {
   return (
-    <div className="flex flex-row h-[4.75rem] w-3/4 bg-[#05252C] bg-opacity-[40%] rounded-[1.5rem] bg-clip-padding backdrop-filter backdrop-blur-sm border border-[#197686] fixed z-[10000] items-center py-[0.75rem] px-[1rem]">
+    <div className="flex flex-row h-[4.75rem] w-[90%] md:w-3/4 bg-[#05252C] bg-opacity-[40%] rounded-[1.5rem] bg-clip-padding backdrop-filter backdrop-blur-sm border border-[#197686] fixed z-[10000] items-center py-[0.75rem] px-[1rem]">
       <div className="w-full grid grid-cols-2 lg:grid-cols-3 grid-rows-1 place-content-stretch items-center">
         <a href="#" className='mr-auto'>
           <img src="/logo.svg" alt="logo" className='h-full w-auto' />
