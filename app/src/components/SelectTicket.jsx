@@ -77,8 +77,8 @@ const SelectTicket = ({ onSelect }) => {
                   type="button"
                   onClick={() => setSelectedTicket(ticket.id)}
                   className={`h-[6.875rem] w-full border ${selectedTicket === ticket.id
-                    ? 'border-[#24A0B5] bg-[#2C545B]'
-                    : 'border-[#197686] bg-transparent hover:bg-[#2C545B]'
+                    ? 'border-[#24A0B5] bg-[#24A0B5]/40'
+                    : 'border-[#197686] bg-transparent hover:bg-[#24A0B5]/20'
                     } rounded-xl transition-colors duration-200 p-[0.75rem] text-left`}
                   aria-pressed={selectedTicket === ticket.id}
                 >
@@ -93,7 +93,7 @@ const SelectTicket = ({ onSelect }) => {
               ))}
             </div>
             {!selectedTicket && (
-              <span role="alert" className="text-red-500 text-sm">
+              <span role="alert" className="text-red-500 text-sm -mt-8 mb-4">
                 Please select a ticket type
               </span>
             )}
@@ -126,7 +126,7 @@ const SelectTicket = ({ onSelect }) => {
                   value={num}
                   className="bg-[#041E23] text-white"
                 >
-                  {num} {num === 1 ? 'Ticket' : 'Tickets'}
+                  {num}
                 </option>
               ))}
             </select>
