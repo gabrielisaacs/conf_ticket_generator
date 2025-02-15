@@ -88,10 +88,15 @@ const AttendeeDetails = ({ onBack, onSubmit }) => {
   };
 
   const onFormSubmit = (data) => {
+    if (!data.avatarUrl) {
+      setUploadError('Please upload a profile photo');
+      return;
+    }
+
     setTicketData({
       ...ticketData,
       ...data,
-      timestamp: '2025-02-14 12:02:13',
+      timestamp: '2025-02-15 07:48:05',
       username: 'gabrielisaacs'
     });
     onSubmit();
@@ -114,7 +119,7 @@ const AttendeeDetails = ({ onBack, onSubmit }) => {
             <div className="flex flex-col sm:flex-row justify-between">
               <p className='text-sm lg:text-[1rem] mb-auto font-normal'>Upload Profile Photo *</p>
               {uploadError && (
-                <span role="alert" className="text-red-500 text-sm mt-1 sm:mt-0">
+                <span role="alert" className="text-red-500 text-sm mt-1 sm:mt-0 absolute -bottom-6 lg:top-6 lg:right-6">
                   {uploadError}
                 </span>
               )}
