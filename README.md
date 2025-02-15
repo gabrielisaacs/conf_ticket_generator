@@ -9,7 +9,6 @@
   <div style="display: flex; gap: 10px; justify-content: center; margin: 20px 0;">
     <img src="https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react" alt="React Version" />
     <img src="https://img.shields.io/badge/Tailwind-3.4.0-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind Version" />
-    <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT" />
   </div>
 </div>
 
@@ -124,12 +123,6 @@ npm run dev
 5. Open a Pull Request
 </div>
 
-## 📄 License
-
-<div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 20px 0;">
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-</div>
 
 <div align="center" style="margin: 40px 0;">
   <p style="color: #666;">
