@@ -49,7 +49,7 @@ const Booked = ({ onBookAnother }) => {
               <div className="flex flex-col h-[23.875rem] lg:h-[27.875rem] w-full py-3 lg:py-[1.65rem] px-4 border border-[#24A0B5] rounded-2xl text-center justify-center gap-4">
                 <div className="flex flex-col w-full justify-center gap-4">
                   <div className="flex flex-col w-full justify-center gap-2">
-                    <p className="text-2xl sm:text-[2.125rem] eventTitle mb-2 mt-4">TechEmber Fest "25</p>
+                    <p className="text-2xl sm:text-[2.125rem] eventTitle mb-0 lg:mb-2 mt-2 lg:mt-4">TechEmber Fest "25</p>
                     <div className="flex flex-col gap-1 text-center mx-auto text-[0.625rem]">
                       <p>📍 Novare Mall, Wuse Zone 5, Abuja</p>
                       <p>🗓️ March 15, 2025 | 7:00 PM</p>
@@ -82,21 +82,21 @@ const Booked = ({ onBookAnother }) => {
 
                     {/* Ticket Info Section */}
                     <div className="flex justify-between divide-x divide-[#133D44]">
-                      <div className="w-1/2 sm:w-[6.75rem] border-t border-[#133D44] pt-2">
+                      <div className="w-1/2 sm:w-[6.75rem] border-t border-[#133D44] pt-1 lg:pt-2">
                         <p className="text-[#D9D9D9]/60">Ticket Type:</p>
                         <p className="text-white truncate">
                           {ticketData.ticketType ?
                             ticketData.ticketType.toUpperCase() : 'N/A'}
                         </p>
                       </div>
-                      <div className="w-1/2 sm:w-[6.75rem] pl-2 border-t border-l border-[#133D44] pt-2">
+                      <div className="w-1/2 sm:w-[6.75rem] pl-2 border-t border-l border-[#133D44] pt-1 lg:pt-2">
                         <p className="text-[#D9D9D9]/60">Ticket for:</p>
                         <p className="text-white">{ticketData.numOfTickets || 1}</p>
                       </div>
                     </div>
 
                     {/* Special Request */}
-                    <div className='w-full min-h-[4.0625rem] border-t border-[#133D44] pt-2'>
+                    <div className='w-full h-[4.0625rem] border-t border-[#133D44] pt-2'>
                       <p className="text-[#D9D9D9]/60">Special request?</p>
                       <p className="text-white max-h-[3rem] overflow-hidden line-clamp-3">
                         {formatSpecialRequest(ticketData.specialRequest)}
