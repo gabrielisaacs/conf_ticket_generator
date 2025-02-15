@@ -107,9 +107,34 @@ npm run dev
 
 ## 📱 Screenshots
 
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0;">
-  <img src="public/screenshot1.png" alt="Ticket Selection" style="width: 100%; border-radius: 10px;" />
-  <img src="public/screenshot2.png" alt="Attendee Details" style="width: 100%; border-radius: 10px;" />
+<div style="margin: 20px 0;">
+  <!-- Mobile Screenshots Row -->
+  <div style="display: flex; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; max-width: 100%;">
+    <img 
+      src="https://github.com/user-attachments/assets/2df4b55a-fb77-40c7-8b50-c5b3d4068361" 
+      alt="Ticket Selection Mobile" 
+      style="flex: 1; width: auto; height: 480px; border-radius: 10px; object-fit: cover;" 
+    />
+    <img 
+      src="https://github.com/user-attachments/assets/366b48e7-2aa9-4785-9f9a-230b5366a20b" 
+      alt="Attendee Details Mobile" 
+      style="flex: 1; width: auto; height: 480px; border-radius: 10px; object-fit: cover;" 
+    />
+    <img 
+      src="https://github.com/user-attachments/assets/6726dc22-cd2c-41b9-b392-63e690894731" 
+      alt="Ticket Booked Mobile" 
+      style="flex: 1;  width: auto; height: 480px; border-radius: 10px; object-fit: cover;" 
+    />
+  </div>
+
+  <!-- Desktop Screenshot -->
+  <div style="width: 100%;">
+    <img 
+      src="https://github.com/user-attachments/assets/eb55e820-01a7-4275-802e-b36018a665f0" 
+      alt="Ticket Selection Desktop" 
+      style="width: 100%; border-radius: 10px; margin-top: 20px;" 
+    />
+  </div>
 </div>
 
 ## 🤝 Contributing
