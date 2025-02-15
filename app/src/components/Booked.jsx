@@ -68,7 +68,6 @@ const Booked = ({ onBookAnother }) => {
                     </div>
                   </div>
                   <div className="w-full bg-[#08343C] border border-[#133D44] rounded-md p-2 text-[0.65rem] text-left">
-                    {/* User Info Section */}
                     <div className="flex justify-between divide-x divide-[#133D44]">
                       <div className="w-1/2 sm:w-[6.75rem]">
                         <p className="text-[#D9D9D9]/60">Name</p>
@@ -80,7 +79,6 @@ const Booked = ({ onBookAnother }) => {
                       </div>
                     </div>
 
-                    {/* Ticket Info Section */}
                     <div className="flex justify-between divide-x divide-[#133D44]">
                       <div className="w-1/2 sm:w-[6.75rem] border-t border-[#133D44] pt-1 lg:pt-2">
                         <p className="text-[#D9D9D9]/60">Ticket Type:</p>
@@ -95,7 +93,6 @@ const Booked = ({ onBookAnother }) => {
                       </div>
                     </div>
 
-                    {/* Special Request */}
                     <div className='w-full h-[4.0625rem] border-t border-[#133D44] pt-2'>
                       <p className="text-[#D9D9D9]/60">Special request?</p>
                       <p className="text-white max-h-[3rem] overflow-hidden line-clamp-3">
