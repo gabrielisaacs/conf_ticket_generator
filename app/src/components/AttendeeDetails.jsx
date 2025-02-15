@@ -99,7 +99,7 @@ const AttendeeDetails = ({ onBack, onSubmit }) => {
 
   return (
     <div className='w-[90vw] sm:w-[90%] md:w-[80%] lg:w-[43.75rem] h-max-content bg-[#041E23] border border-[#0E464F] rounded-2xl lg:rounded-[2rem] mt-[6rem] lg:mt-[8rem] mb-4 lg:mb-16 text-white p-4 md:p-6 lg:p-[3rem]'>
-      <div className="flex flex-col sm:flex-row w-full mb-2 gap-2">
+      <div className="flex flex-col sm:flex-row w-full my-2 gap-2">
         <div className="text-2xl lg:text-[2rem] pageTitle">Attendee Details</div>
         <div className="text-sm lg:text-[1rem] ml-0 lg:ml-auto">Step 2/3</div>
       </div>
