@@ -76,7 +76,7 @@ const AttendeeDetails = ({ onBack, onSubmit }) => {
       setTicketData(prev => ({
         ...prev,
         avatarUrl: optimizedUrl,
-        uploadTimestamp: '2025-02-14 12:02:13',
+        uploadTimestamp: '2025-02-15 08:23:27',
         uploaderLogin: 'gabrielisaacs'
       }));
     } catch (error) {
@@ -96,7 +96,7 @@ const AttendeeDetails = ({ onBack, onSubmit }) => {
     setTicketData({
       ...ticketData,
       ...data,
-      timestamp: '2025-02-15 07:48:05',
+      timestamp: '2025-02-15 08:23:27',
       username: 'gabrielisaacs'
     });
     onSubmit();
@@ -154,15 +154,41 @@ const AttendeeDetails = ({ onBack, onSubmit }) => {
                   />
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-3">
                     <VscCloudDownload size={32} aria-hidden="true" />
-                    <p className="text-center text-[1rem] font-normal max-w-48">
-                      Upload new photo
+                    <p className="text-center text-[1rem] font-normal max-w-28">
+                      Click to upload new photo
                     </p>
                   </div>
                 </>
               ) : uploading ? (
-                <div className="flex flex-col items-center gap-2">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#24A0B5]"></div>
-                  <p>Uploading...</p>
+                <div className="flex flex-col items-center justify-center gap-4">
+                  <svg
+                    className="w-12 h-12 text-[#24A0B5]"
+                    viewBox="0 0 50 50"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="25"
+                      cy="25"
+                      r="20"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      fill="none"
+                    />
+                    <circle
+                      className="upload-progress"
+                      cx="25"
+                      cy="25"
+                      r="20"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  <div className="flex flex-col items-center gap-1">
+                    <p className="text-[1rem] font-medium uploading-text">Uploading...</p>
+                  </div>
                 </div>
               ) : (
                 <>
