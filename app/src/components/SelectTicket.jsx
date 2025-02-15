@@ -59,7 +59,7 @@ const SelectTicket = ({ onSelect }) => {
               Join us for an unforgettable experience at TechEmber! Secure your spot now.
             </p>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-center justify-center text-sm lg:text-base">
-              <p>📍 Abuja, NG</p>
+              <p>📍 Transcorp Hilton, Abuja</p>
               <p className="hidden sm:block">||</p>
               <p>March 15, 2025 | 7:00 PM</p>
             </div>

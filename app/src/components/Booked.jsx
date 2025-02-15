@@ -51,7 +51,7 @@ const Booked = ({ onBookAnother }) => {
                   <div className="flex flex-col w-full justify-center gap-2">
                     <p className="text-2xl sm:text-[2.125rem] eventTitle mb-0 lg:mb-2 mt-2 lg:mt-4">TechEmber Fest "25</p>
                     <div className="flex flex-col gap-1 text-center mx-auto text-[0.625rem]">
-                      <p>📍 Novare Mall, Wuse Zone 5, Abuja</p>
+                      <p>📍 Transcorp Hilton, Abuja</p>
                       <p>🗓️ March 15, 2025 | 7:00 PM</p>
                     </div>
                   </div>
