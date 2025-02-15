@@ -5,6 +5,7 @@ import { useTicket } from '../context/TicketContext';
 const SelectTicket = ({ onSelect }) => {
   const { ticketData, setTicketData } = useTicket();
   const [selectedTicket, setSelectedTicket] = useState(ticketData.ticketType || null);
+  const [showError, setShowError] = useState(false);
 
   const {
     register,
@@ -19,21 +20,24 @@ const SelectTicket = ({ onSelect }) => {
 
   const tickets = [
     { id: 'free', price: 'Free', type: 'REGULAR ACCESS', available: '20/52', cost: 0 },
-    { id: 'vvip', price: '$150', type: 'VVIP ACCESS', available: '20/52', cost: 150 },
-    { id: 'vip', price: '$250', type: 'VIP ACCESS', available: '20/52', cost: 250 }
+    { id: 'vvip', price: '$150', type: 'VIP ACCESS', available: '20/52', cost: 150 },
+    { id: 'vip', price: '$250', type: 'VVIP ACCESS', available: '20/52', cost: 250 }
   ];
 
   const ticketOptions = Array.from({ length: 10 }, (_, i) => i + 1);
 
   const onSubmit = (data) => {
-    if (!selectedTicket) return;
+    if (!selectedTicket) {
+      setShowError(true);
+      return;
+    }
 
     setTicketData({
       ...ticketData,
       ticketType: selectedTicket,
       numOfTickets: parseInt(data.numOfTickets),
       ticketPrice: tickets.find(t => t.id === selectedTicket).price,
-      purchaseDate: '2025-02-14 19:51:39',
+      timestamp: '2025-02-15 08:45:50',
       username: 'gabrielisaacs'
     });
 
@@ -75,7 +79,10 @@ const SelectTicket = ({ onSelect }) => {
                 <button
                   key={ticket.id}
                   type="button"
-                  onClick={() => setSelectedTicket(ticket.id)}
+                  onClick={() => {
+                    setSelectedTicket(ticket.id);
+                    setShowError(false);
+                  }}
                   className={`h-[6.875rem] w-full border ${selectedTicket === ticket.id
                     ? 'border-[#24A0B5] bg-[#24A0B5]/40'
                     : 'border-[#197686] bg-transparent hover:bg-[#24A0B5]/20'
@@ -92,7 +99,7 @@ const SelectTicket = ({ onSelect }) => {
                 </button>
               ))}
             </div>
-            {!selectedTicket && (
+            {showError && !selectedTicket && (
               <span role="alert" className="text-red-500 text-sm -mt-8 mb-4">
                 Please select a ticket type
               </span>
@@ -141,8 +148,7 @@ const SelectTicket = ({ onSelect }) => {
             </button>
             <button
               type="submit"
-              disabled={!selectedTicket}
-              className='w-full h-[3.25rem] bg-[#24A0B5] justify-center rounded-xl border border-[#24A0B5] hover:bg-opacity-80 text-white text-sm lg:text-[1rem] text-center transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed'
+              className='w-full h-[3.25rem] bg-[#24A0B5] justify-center rounded-xl border border-[#24A0B5] hover:bg-opacity-80 text-white text-sm lg:text-[1rem] text-center transition-all duration-300'
             >
               {selectedTicket === 'free' ? 'Get My Free Ticket' : 'Continue to Payment'}
             </button>
