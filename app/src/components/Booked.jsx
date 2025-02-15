@@ -43,12 +43,10 @@ const Booked = ({ onBookAnother }) => {
         <div className="h-full rounded-full bg-[#24a0b5] w-full"></div>
       </div>
       <div className="w-full h-max-content bg-[#08252B] border border-[#0E464F] rounded-xl lg:rounded-[2rem] p-4 lg:p-[1.45rem]">
-        {/* Ticket Container with preserved aspect ratio */}
         <div className="relative w-full max-w-[18.75rem] mx-auto my-4 lg:my-8">
           <div ref={ticketRef} className="ticketContainer aspect-[300/600] w-full">
-            {/* Content wrapper with absolute positioning to maintain layout */}
             <div className="absolute inset-0 p-[1rem]">
-              <div className="flex flex-col h-[27.875rem] w-full py-[1.65rem] px-4 border border-[#24A0B5] rounded-2xl text-center justify-center gap-4">
+              <div className="flex flex-col h-[23.875rem] lg:h-[27.875rem] w-full py-3 lg:py-[1.65rem] px-4 border border-[#24A0B5] rounded-2xl text-center justify-center gap-4">
                 <div className="flex flex-col w-full justify-center gap-4">
                   <div className="flex flex-col w-full justify-center gap-2">
                     <p className="text-2xl sm:text-[2.125rem] eventTitle mb-2 mt-4">TechEmber Fest "25</p>
